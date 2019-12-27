@@ -1,43 +1,56 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
+import colors from '../themes/colors';
+
+const HeaderStyle = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  box-shadow: 0 0 5px hsla(0,0%,51.8%,.65);
+  margin-bottom: 2rem;
+
+  a {
+     text-decoration: none;
+     color: ${colors.primary};
+
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    & li {
+      margin: 1rem;
+      padding: 0.25em;
+    }
+  }
+`;
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <HeaderStyle>
+    <h1>
+      {siteTitle}
+    </h1>
 
-      <ul>
+    <ul>
+      <li>
         <Link to="/blog">
           Blog
         </Link>
+      </li>
+      <li>
         <Link to="/about">
           About
         </Link>
-      </ul>
-    </div>
-  </header>
+      </li>
+    </ul>
+  </HeaderStyle>
 );
 
 Header.propTypes = {

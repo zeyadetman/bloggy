@@ -20,6 +20,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 ## Plugins
 
 1. [gatsby-plugin-eslint](https://www.gatsbyjs.org/packages/gatsby-plugin-eslint/)
+2. [styled-components](https://www.gatsbyjs.org/docs/styled-components/)
 
 ## 💫 Deploy
 

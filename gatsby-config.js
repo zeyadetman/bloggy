@@ -1,11 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    title: 'My Blog',
+    description: 'Blog of mine',
+    author: {
+      name: 'Zeyad Etman',
+      avatar: 'https://pbs.twimg.com/profile_images/1166663145118732288/BtHLImve_400x400.jpg',
+      meta: 'Software Engineer',
+      twitter: 'zeyadetman',
+      github: 'zeyadetman',
+      facebook: 'zeyadetman',
+      linkedIn: 'zeyadetman',
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
     'gatsby-plugin-eslint',
     {
       resolve: 'gatsby-source-filesystem',
