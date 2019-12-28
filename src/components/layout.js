@@ -14,6 +14,7 @@ import './layout.css';
 import InfoCard from './infoCard';
 import useWindowSize from '../hooks/useWindowSize';
 import breakpoints from '../themes/breakpoints';
+import colors from '../themes/colors';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -21,7 +22,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: #000 !important;
+    .rc-pagination-item-active {
+      background-color: ${colors.primary};
+      border-color: ${colors.primary};
+    }
+
+    .rc-pagination-item:hover a {
+      color: ${colors.primary};
+    }
+
+    .rc-pagination-item:hover {
+      border-color: ${colors.primary};
+    }
 
     h1, ul, h2 {
       margin: 0;
