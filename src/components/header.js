@@ -21,12 +21,19 @@ const HeaderStyle = styled.header`
     }
   }
 
+  h1{
+    font-size: 2rem;
+    a:hover{
+      opacity: 1;
+    }
+  }
+
   ul {
     display: flex;
     list-style: none;
 
     & li {
-      margin: 1rem;
+      margin: 0.5rem;
       padding: 0.25em;
     }
   }
@@ -35,7 +42,9 @@ const HeaderStyle = styled.header`
 const Header = ({ siteTitle }) => (
   <HeaderStyle>
     <h1>
-      {siteTitle}
+      <Link to="/">
+        {siteTitle}
+      </Link>
     </h1>
 
     <ul>

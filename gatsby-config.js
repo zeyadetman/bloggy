@@ -5,7 +5,7 @@ module.exports = {
     author: {
       name: 'Zeyad Etman',
       avatar: 'https://pbs.twimg.com/profile_images/1166663145118732288/BtHLImve_400x400.jpg',
-      meta: 'Software Engineer',
+      title: 'Software Engineer',
       twitter: 'zeyadetman',
       github: 'zeyadetman',
       facebook: 'zeyadetman',

@@ -21,6 +21,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 1. [gatsby-plugin-eslint](https://www.gatsbyjs.org/packages/gatsby-plugin-eslint/)
 2. [styled-components](https://www.gatsbyjs.org/docs/styled-components/)
+3. [Using Google Fonts](https://www.gatsbyjs.org/docs/recipes/styling-css/#using-google-fonts)
 
 ## 💫 Deploy
 
