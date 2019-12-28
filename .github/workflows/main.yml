@@ -27,6 +27,11 @@ jobs:
     - run: yarn
     - run: git config --global user.email "zeyadetman@gmail.com"
     - run: git config --global user.name "Zeyad Etman"
+    - run: |
+        git config --global credential.helper ""
+        git config --global --add credential.helper store
+        echo "https://x-access-token:${{ secrets.GITHUB_API_DEPLOY }}@github.com" >> ~/.git-credentials
+        git config --global url."https://github.com/".insteadof git@github.com:
     
     - run: yarn build
 
