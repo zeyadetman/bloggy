@@ -15,5 +15,6 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        npm run build
-        npm run deploy
+        yarn
+        yarn build
+        yarn deploy
