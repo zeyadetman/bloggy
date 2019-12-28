@@ -13,10 +13,10 @@ jobs:
       - name: Install
         run: |
           yarn
-          yarn build
       - name: Build and Deploy Repo
         uses: JamesIves/github-pages-deploy-action@releases/v3-test
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: 'build'
+          FOLDER: build
+          CLEAN: true 
