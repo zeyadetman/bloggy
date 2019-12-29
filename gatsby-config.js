@@ -1,7 +1,7 @@
 const configs = require('./configs');
 
 module.exports = {
-  ...configs,
+  ...{ siteMetadata: configs.siteMetadata },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',

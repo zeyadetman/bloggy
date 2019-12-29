@@ -44,7 +44,6 @@ const GlobalStyle = createGlobalStyle`
 const MainContainerSectionStyle = styled.div`
   display: flex;
   position: relative;
-  height: 85vh;
 
   ${(props) => (props.width > breakpoints.tablet ? '' : `
     flex-direction: column;
@@ -82,12 +81,7 @@ const Layout = ({ children }) => {
         <MainSectionStyle>
           {children}
 
-          <FooterStyle>
-          ©
-            {new Date().getFullYear()}
-            , Built with
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </FooterStyle>
+          <FooterStyle />
         </MainSectionStyle>
       </MainContainerSectionStyle>
     </>

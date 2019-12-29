@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - source
+  fork:
 
 jobs:
   build-deploy:

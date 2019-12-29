@@ -1,7 +1,7 @@
 ---
-path: "/blog/test"
+path: "/blog/hi"
 date: "2019-12-29"
-title: "test"
+title: "Hi"
 ---
 
-test
+Hi, This is your first post.

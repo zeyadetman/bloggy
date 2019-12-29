@@ -13,7 +13,20 @@ Kick off your project with this default boilerplate. This starter ships with the
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
+**Note** *With any change on master there's a new deploy, so if you want to draft any change please create a pr before merging
+to master or create another branch*
 
+
+1. Fork this repo.
+2. Change the repo name to `yourgithubname.github.io`.
+3. Add SSH deploy key by running this command:
+  `ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""`
+4. Go to Deploy Keys and add your public key with the Allow write access
+5. Go to Secrets and add your private key as `ACTIONS_DEPLOY_KEY`
+6. Open `configs.js` file of your forked repo and customize your data.
+7. Open `./src/pages/index.js` to add intro for your site (write `html`).
+8. Open `./src/pages/about.js` to write about yourself (write `html`).
+9. Open `./src/posts` to add your first post (write `markdown`). [more info here](https://www.gatsbyjs.org/docs/adding-markdown-pages/#add-a-markdown-file).
 
 ## 🧐 What's inside?
 

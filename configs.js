@@ -1,6 +1,7 @@
 module.exports = {
+  postsPerPage: 10,
   siteMetadata: {
-    title: 'My Blog',
+    title: 'Bloggy',
     description: 'Blog of mine',
     author: {
       name: 'Zeyad Etman',

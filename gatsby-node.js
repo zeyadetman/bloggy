@@ -1,4 +1,5 @@
 const path = require('path');
+const { postsPerPage } = require('./configs');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -25,7 +26,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
   const posts = result.data.allMarkdownRemark.edges;
-  const postsPerPage = 10;
   const numPages = Math.ceil(posts.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
