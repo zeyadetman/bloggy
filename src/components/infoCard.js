@@ -84,10 +84,12 @@ const SocialSectionStyle = styled.ul`
 `;
 
 const useWindowSize = () => {
-  const [size, setSize] = useState([window.innerWidth, window.innerHeight]);
+  const isClient = typeof window === 'object';
+
+  const [size, setSize] = useState([isClient ? window.innerWidth : 0, isClient ? window.innerHeight : 0]);
   useLayoutEffect(() => {
     function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
+      setSize([isClient ? window.innerWidth : 0, isClient ? window.innerHeight : 0]);
     }
     window.addEventListener('resize', updateSize);
     updateSize();
