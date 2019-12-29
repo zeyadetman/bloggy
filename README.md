@@ -25,6 +25,8 @@ to master or create another branch*
 7. Open `./src/pages/index.js` to add intro for your site (write `html`).
 8. Open `./src/pages/about.js` to write about yourself (write `html`).
 9. Open `./src/posts` to add your first post (write `markdown`). [more info here](https://www.gatsbyjs.org/docs/adding-markdown-pages/#add-a-markdown-file).
+10. Make sure GitHub Actions are active. Go to Actions > `I understand my workflows, go ahead and run them` > New Workflow > 
+Set up a workflow yourself > then copy everything from `./main.yml`. Don't change anything.
 
 ## 🧐 What's inside?
 
