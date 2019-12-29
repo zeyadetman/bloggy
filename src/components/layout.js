@@ -12,7 +12,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from './header';
 import './layout.css';
 import InfoCard from './infoCard';
-import useWindowSize from '../hooks/useWindowSize';
 import breakpoints from '../themes/breakpoints';
 import colors from '../themes/colors';
 
@@ -45,9 +44,9 @@ const MainContainerSectionStyle = styled.div`
   display: flex;
   position: relative;
 
-  ${(props) => (props.width > breakpoints.tablet ? '' : `
-    flex-direction: column;
-  `)}
+  @media (max-width: ${breakpoints.tablet}px) {
+    flex-direction: column;    
+  }
 `;
 
 const MainSectionStyle = styled.main`
@@ -61,7 +60,6 @@ const FooterStyle = styled.footer`
 `;
 
 const Layout = ({ children }) => {
-  const { width } = useWindowSize();
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -76,7 +74,7 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <MainContainerSectionStyle width={width}>
+      <MainContainerSectionStyle>
         <InfoCard />
         <MainSectionStyle>
           {children}
