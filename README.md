@@ -22,6 +22,7 @@ to master or create another branch*
 4. Go to Deploy Keys and add your public key with the Allow write access
 5. Go to Secrets and add your private key as `ACTIONS_DEPLOY_KEY`
 6. Open `configs.js` file of your forked repo and customize your data.
+7. Add your `favicon` to `./src/images/favicon.png`.
 7. Open `./src/pages/index.js` to add intro for your site (write `html`).
 8. Open `./src/pages/about.js` to write about yourself (write `html`).
 9. Open `./src/posts` to add your first post (write `markdown`). [more info here](https://www.gatsbyjs.org/docs/adding-markdown-pages/#add-a-markdown-file).
