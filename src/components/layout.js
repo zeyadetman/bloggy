@@ -12,8 +12,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from './header';
 import './layout.css';
 import InfoCard from './infoCard';
-import breakpoints from '../themes/breakpoints';
-import colors from '../themes/colors';
+import { theme } from '../../configs';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -22,16 +21,16 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     .rc-pagination-item-active {
-      background-color: ${colors.primary};
-      border-color: ${colors.primary};
+      background-color: ${theme.colors.primary};
+      border-color: ${theme.colors.primary};
     }
 
     .rc-pagination-item:hover a {
-      color: ${colors.primary};
+      color: ${theme.colors.primary};
     }
 
     .rc-pagination-item:hover {
-      border-color: ${colors.primary};
+      border-color: ${theme.colors.primary};
     }
 
     h1, ul, h2 {
@@ -44,7 +43,7 @@ const MainContainerSectionStyle = styled.div`
   display: flex;
   position: relative;
 
-  @media (max-width: ${breakpoints.tablet}px) {
+  @media (max-width: ${theme.breakpoints.tablet}px) {
     flex-direction: column;    
   }
 `;
@@ -78,7 +77,6 @@ const Layout = ({ children }) => {
         <InfoCard />
         <MainSectionStyle>
           {children}
-
           <FooterStyle />
         </MainSectionStyle>
       </MainContainerSectionStyle>

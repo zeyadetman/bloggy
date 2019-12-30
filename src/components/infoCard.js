@@ -1,16 +1,15 @@
 import React, { useLayoutEffect, useState } from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
-import breakpoints from '../themes/breakpoints';
 import twitterIcon from '../images/twitter.png';
 import linkedinIcon from '../images/linkedin.png';
 import facebookIcon from '../images/facebook.png';
 import githubIcon from '../images/github.png';
-import colors from '../themes/colors';
+import { theme } from '../../configs';
 
 
 const InfoCardStyle = styled.div`
-  @media (min-width: ${breakpoints.tablet - 1}px) {
+  @media (min-width: ${theme.breakpoints.tablet - 1}px) {
     padding-left: 4rem;
     min-width: 16rem;
     max-width: 16rem;
@@ -20,7 +19,7 @@ const InfoCardStyle = styled.div`
     top: 5%;
   }
 
-  @media (max-width: ${breakpoints.tablet}px) {
+  @media (max-width: ${theme.breakpoints.tablet}px) {
     display: flex;
     align-items: center;
     padding-left: 2rem;
@@ -50,7 +49,7 @@ const ContentSectionStyle = styled.div`
   h2 {
     font-size: 1.5em;
   }
-  @media (max-width: ${breakpoints.tablet}px) {
+  @media (max-width: ${theme.breakpoints.tablet}px) {
     p {
     margin-bottom: 0;
     }
@@ -60,7 +59,7 @@ const ContentSectionStyle = styled.div`
   
 `;
 const SocialSectionStyle = styled.ul`
-  @media (max-width: ${breakpoints.tablet}px) {
+  @media (max-width: ${theme.breakpoints.tablet}px) {
     display: flex;
   }
 
@@ -70,7 +69,7 @@ const SocialSectionStyle = styled.ul`
     align-items: center;
 
     a{
-      color: ${colors.primary};
+      color: ${theme.colors.primary};
       opacity: 0.8;
       text-transform: capitalize;
       text-decoration: none;
@@ -86,7 +85,10 @@ const SocialSectionStyle = styled.ul`
 const useWindowSize = () => {
   const isClient = typeof window === 'object';
 
-  const [size, setSize] = useState([isClient ? window.innerWidth : 0, isClient ? window.innerHeight : 0]);
+  const [size, setSize] = useState([
+    isClient ? window.innerWidth : 0,
+    isClient ? window.innerHeight : 0,
+  ]);
   useLayoutEffect(() => {
     function updateSize() {
       setSize([isClient ? window.innerWidth : 0, isClient ? window.innerHeight : 0]);
@@ -128,7 +130,7 @@ function InfoCard() {
       <ContentSectionStyle>
         <h2>{author.name}</h2>
         <p>{author.title}</p>
-        {width < breakpoints.tablet ? (
+        {width < theme.breakpoints.tablet ? (
           <SocialSectionStyle>
             {author.twitter ? (
               <li>
@@ -153,7 +155,7 @@ function InfoCard() {
           </SocialSectionStyle>
         ) : null}
       </ContentSectionStyle>
-      {width > breakpoints.tablet ? (
+      {width > theme.breakpoints.tablet ? (
         <SocialSectionStyle>
           {author.twitter ? (
             <li>

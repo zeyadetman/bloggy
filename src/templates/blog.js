@@ -5,8 +5,7 @@ import Pagination from 'rc-pagination';
 import 'rc-pagination/assets/index.css';
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import colors from '../themes/colors';
-import configs from '../../configs';
+import configs, { theme } from '../../configs';
 
 const PostsListStyle = styled.ul`
   list-style: none;
@@ -19,7 +18,7 @@ const PostsListStyle = styled.ul`
       text-decoration: underline;
       margin-bottom: 0.25rem;
       a{
-        color: ${colors.primary};
+        color: ${theme.colors.primary};
         opacity: 0.8;
       
         &:hover{

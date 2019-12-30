@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import colors from '../themes/colors';
+import { theme } from '../../configs';
 
 const HeaderStyle = styled.header`
   display: flex;
@@ -14,7 +14,7 @@ const HeaderStyle = styled.header`
 
   a {
      text-decoration: none;
-     color: ${colors.primary};
+     color: ${theme.colors.primary};
 
     &:hover{
       opacity: 0.7;

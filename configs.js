@@ -14,4 +14,14 @@ module.exports = {
       linkedIn: 'zeyadetman',
     },
   },
+  theme: {
+    colors: {
+      black: 'rgb(36, 41, 46)',
+      primary: 'rgb(36, 41, 46)',
+    },
+    breakpoints: {
+      tablet: 1023,
+      mobile: 425,
+    },
+  },
 };
