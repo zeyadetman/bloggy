@@ -1,5 +1,6 @@
 module.exports = {
   postsPerPage: 10,
+  primary: 'rgb(36, 41, 46)',
   siteMetadata: {
     title: 'Bloggy',
     description: 'Blog of mine',
