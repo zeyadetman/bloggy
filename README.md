@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Bloggy
+  ${{secrets.TITLE}}
 </h1>
 
 The Fastest/Easiest way to create your own site/portfolio with Blog integration.
