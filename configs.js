@@ -2,10 +2,10 @@ module.exports = {
   postsPerPage: 10,
   primary: 'rgb(36, 41, 46)',
   siteMetadata: {
-    title: {secrets.TITLE},
+    title: 'Bloggy',
     description: 'Blog of mine',
     author: {
-      name: {secrets.AUTHOR_NAME},
+      name: 'Zeyad',
       avatar: 'https://pbs.twimg.com/profile_images/1166663145118732288/BtHLImve_400x400.jpg',
       title: 'Software Engineer',
       twitter: 'zeyadetman',
