@@ -4,14 +4,16 @@ module.exports = {
   siteMetadata: {
     title: 'Bloggy',
     description: 'Blog of mine',
+    intro: 'I do stuff on the Internet.',
     author: {
       name: 'Zeyad',
-      avatar: 'https://pbs.twimg.com/profile_images/1166663145118732288/BtHLImve_400x400.jpg',
+      avatar:
+        'https://scontent-hbe1-1.xx.fbcdn.net/v/t1.15752-9/118916821_338912880656323_7386732972629071607_n.jpg?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=KTS-JTRLWTQAX8Enqck&_nc_ht=scontent-hbe1-1.xx&oh=21173121af5aac0547502c9cf971530b&oe=5F7F3229',
       title: 'Software Engineer',
       twitter: 'zeyadetman',
       github: 'zeyadetman',
       facebook: 'zeyadetman',
-      linkedIn: 'zeyadetman',
+      linkedin: 'zeyadetman',
     },
   },
   theme: {

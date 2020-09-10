@@ -1,6 +1,6 @@
 ---
 path: "/blog/hi"
-date: "2019-12-29"
+date: "2020-09-10"
 title: "Hi"
 ---
 

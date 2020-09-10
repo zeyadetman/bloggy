@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../configs';
+
 
 const HeaderStyle = styled.header`
   display: flex;
@@ -23,6 +23,7 @@ const HeaderStyle = styled.header`
 
   h1{
     font-size: 2rem;
+    margin-bottom: 0;
     a:hover{
       opacity: 1;
     }
@@ -31,43 +32,50 @@ const HeaderStyle = styled.header`
   ul {
     display: flex;
     list-style: none;
+    margin-bottom: 0;
 
     & li {
+      margin-bottom: 0;
       margin: 0.5rem;
       padding: 0.25em;
+      font-size: 1.2rem;
     }
   }
 `;
 
-const Header = ({ siteTitle }) => (
-  <HeaderStyle>
-    <h1>
-      <Link to="/">
-        {siteTitle}
-      </Link>
-    </h1>
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
 
-    <ul>
-      <li>
-        <Link to="/blog">
+  return (
+    <HeaderStyle>
+      <h1>
+        <Link to="/">
+          {data.site.siteMetadata.title}
+        </Link>
+      </h1>
+
+      <ul>
+        <li>
+          <Link to="/blog">
           Blog
-        </Link>
-      </li>
-      <li>
-        <Link to="/about">
+          </Link>
+        </li>
+        {/* <li>
+          <Link to="/about">
           About
-        </Link>
-      </li>
-    </ul>
-  </HeaderStyle>
-);
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: '',
+          </Link>
+        </li> */}
+      </ul>
+    </HeaderStyle>
+  );
 };
 
 export default Header;

@@ -1,5 +1,5 @@
 /**
- * Layout component that queries for data
+ * HomeLayout component that queries for data
  * with Gatsby's useStaticQuery component
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
@@ -8,13 +8,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 import Header from './header';
 import './layout.css';
-import InfoCard from './infoCard';
 import { theme } from '../../configs';
-
-deckDeckGoHighlightElement();
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -46,32 +42,25 @@ const MainContainerSectionStyle = styled.div`
   }
 `;
 
-const MainSectionStyle = styled.main`
-  margin-left: 0;
-`;
-
 const FooterStyle = styled.footer`
   position: absolute;
   bottom: 0;
   height: 50px;
 `;
 
-const Layout = ({ children }) => (
+const HomeLayout = ({ children }) => (
   <>
     <GlobalStyle />
     <Header />
     <MainContainerSectionStyle>
-      <InfoCard />
-      <MainSectionStyle>
-        {children}
-        <FooterStyle />
-      </MainSectionStyle>
+      {children}
+      <FooterStyle />
     </MainContainerSectionStyle>
   </>
 );
 
-Layout.propTypes = {
+HomeLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default HomeLayout;

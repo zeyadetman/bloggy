@@ -3,6 +3,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
+import { theme } from '../../configs';
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -20,11 +21,22 @@ export default function Template({
       font-weight: 500;
     }
   `;
+
+  const BlogPostContainer = styled.div`
+    & .blog-post {
+      width: 80%;
+      
+      @media (max-width: ${theme.breakpoints.tablet}px) {
+        margin: 1.5rem auto 0 auto;   
+      }
+    }
+  `;
+
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
-      <div className="blog-post-container">
+      <BlogPostContainer>
         <div className="blog-post">
           <BlogPostTitleStyle>{frontmatter.title}</BlogPostTitleStyle>
           <div
@@ -34,12 +46,12 @@ export default function Template({
           />
 
           <DateSectionStyle>
-              Updated:
+              Date:
             {' '}
             <time dateTime={frontmatter.date}>{frontmatter.date}</time>
           </DateSectionStyle>
         </div>
-      </div>
+      </BlogPostContainer>
     </Layout>
   );
 }

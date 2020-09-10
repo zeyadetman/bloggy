@@ -26,8 +26,11 @@ const PostsListStyle = styled.ul`
         }
       }
     }
-  
-  
+  }
+
+  width: 80%;
+  @media (max-width: ${theme.breakpoints.tablet}px) {
+    margin: 1.5rem auto 0 auto;   
   }
 `;
 const BlogPostTemplate = ({ data }) => {

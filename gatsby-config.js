@@ -3,6 +3,16 @@ const configs = require('./configs');
 module.exports = {
   ...{ siteMetadata: configs.siteMetadata },
   plugins: [
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-highlight-code',
+          },
+        ],
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-eslint',
@@ -13,7 +23,6 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
