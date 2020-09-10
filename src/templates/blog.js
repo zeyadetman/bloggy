@@ -28,7 +28,7 @@ const PostsListStyle = styled.ul`
     }
   }
 
-  max-width: 1110px;
+  max-width: 900px;
   @media (max-width: ${theme.breakpoints.tablet}px) {
     width: 80%;
     margin: 1.5rem auto 0 auto;   

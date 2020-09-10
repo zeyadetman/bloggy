@@ -24,7 +24,7 @@ export default function Template({
 
   const BlogPostContainer = styled.div`
     & .blog-post {
-      max-width: 1110px;
+      max-width: 900px;
 
       @media (max-width: ${theme.breakpoints.tablet}px) {
         width: 80%;
